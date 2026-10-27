@@ -1,15 +1,12 @@
-function About() {
-    return (
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Мене цікавить сфера інформаційних технологій, особливо принципи роботи комп'ютерних систем, мереж та способи захисту інформації. Під час навчання я поступово освоюю програмування, роботу з мережевими технологіями та основи кібербезпеки.
-            </p>
-            <p>
-                Найбільше мені подобаються практичні завдання, де можна самостійно розібратися в роботі певної технології, знайти причину проблеми та спосіб її вирішення. У майбутньому планую поглиблювати знання в галузі кібербезпеки та системного адміністрування.
-            </p>
-        </section>
-    );
+function About({ text }) {
+  return (
+    <section id="about" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg md:col-span-2">
+      <h2 className="mb-3 border-b-2 border-sky-500 pb-1 text-2xl font-semibold text-slate-700">
+        About Me
+      </h2>
+      <p className="leading-relaxed text-slate-600">{text}</p>
+    </section>
+  );
 }
 
 export default About;

@@ -1,17 +1,19 @@
-function Projects() {
-    return (
-        <section>
-            <h2>Academic Projects</h2>
-            <article>
-                <h3>Лабораторна робота №1, №2 — Web Development</h3>
-                <p>Розробка та створення вебсайту-резюме за допомогою семантичного HTML5, Git, а також компонентного підходу у React та Vite.</p>
-            </article>
-            <article>
-                <h3>C# Practical Laboratory Works</h3>
-                <p>Розробка об'єктно-орієнтованих застосунків у C#, реалізація інтерфейсу IComparable для сортування списків, розробка графічних інтерфейсів на Windows Forms.</p>
-            </article>
-        </section>
-    );
+function Projects({ items }) {
+  return (
+    <section id="projects" className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg md:col-span-2">
+      <h2 className="mb-3 border-b-2 border-sky-500 pb-1 text-2xl font-semibold text-slate-700">
+        Projects
+      </h2>
+      <div className="grid gap-4 md:grid-cols-2">
+        {items.map((proj) => (
+          <article key={proj.title} className="rounded-lg border border-slate-100 bg-slate-50 p-4 transition hover:bg-sky-50">
+            <h3 className="text-lg font-semibold text-slate-900">{proj.title}</h3>
+            <p className="mt-1 text-sm text-slate-600">{proj.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default Projects;
