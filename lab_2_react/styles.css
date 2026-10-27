@@ -1,0 +1,15 @@
+/* 1. Скидання та база */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2d36;
+  background: #eef1f4;
+}
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  color: #375c6f;
+}
