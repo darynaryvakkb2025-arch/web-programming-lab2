@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Резюме Ривак Дарини Орестівни, студентки спеціальності Кібербезпека та захист інформації">
     <title>CV — Ривак Дарина</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <header>
-        <h1>Ривак Дарина Орестівна</h1>
+        <div class="header-top">
+            <h1>Ривак Дарина Орестівна</h1>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" type="button">🌙 Нічний режим</button>
+        </div>
         <p>Студентка | Cybersecurity and Information Protection</p>
-
         <address>
             <ul>
                 <li>Місто: Львів, Україна</li>
@@ -21,7 +23,6 @@
     </header>
 
     <main>
-
         <section id="about">
             <h2>About Me</h2>
             <p>
@@ -39,14 +40,12 @@
 
         <section id="education">
             <h2>Education</h2>
-
             <article>
                 <h3>Національний університет «Львівська політехніка»</h3>
                 <p>Спеціальність: Кібербезпека та захист інформації (Cybersecurity and Information Protection)</p>
                 <p>Освітній рівень: Бакалавр</p>
                 <p>Період навчання: <time datetime="2025">2025</time> – 2029</p>
             </article>
-
             <article>
                 <h3>Львівський ліцей №8</h3>
                 <p>Загальна середня освіта</p>
@@ -56,7 +55,6 @@
 
         <section id="technical-skills">
             <h2>Technical Skills</h2>
-
             <ul>
                 <li>
                     Programming: <strong>C# (.NET, Object-Oriented Programming, Windows Forms), Python (NumPy, Pandas, Data Structures), HTML5.</strong>
@@ -87,7 +85,6 @@
 
         <section id="projects">
             <h2>Projects & Experience</h2>
-
             <article>
                 <h3>Розробка програмних модулів мовою C#</h3>
                 <p>
@@ -95,7 +92,6 @@
                     кастомних класів та систем сортування даних у середовищі Visual Studio (Windows Forms).
                 </p>
             </article>
-
             <article>
                 <h3>Практичне застосування Python для аналізу даних</h3>
                 <p>
@@ -103,7 +99,6 @@
                     виразами, обробка винятків та реалізація базових алгоритмів.
                 </p>
             </article>
-
             <article>
                 <h3>Дослідження та аналіз систем аудиту безпеки</h3>
                 <p>
@@ -111,7 +106,6 @@
                     інформаційних ресурсів і підготовка аналітичних матеріалів.
                 </p>
             </article>
-
             <article>
                 <h3>Веброзробка та робота з Git</h3>
                 <p>
@@ -123,10 +117,8 @@
 
         <section id="soft-skills">
             <h2>Soft Skills</h2>
-
             <ul>
-                <li><strong>Працьовитість та відповідальність</strong> — сумлінно та наполегливо ставлюся до виконання кожного завдання, ретельно дотримуючись дедлайнів.</li>
-                <li><strong>Комунікабельність та робота в команді</strong> — легко знаходжу спільну мову з людьми, ефективно взаємодію під час групових завдань та спільних проєктів.</li>
+                <li><strong>Працьовитість та комунікабельність</strong> — працьовита, легко знаходжу спільну мову з людьми, комунікабельна, вмію працювати в команді та дотримуюся дедлайнів.</li>
                 <li><strong>Аналітичне мислення</strong> — вміння структурувати складну інформацію, знаходити логічні зв'язки та системні рішення.</li>
                 <li><strong>Швидке навчання</strong> — висока здатність до освоєння нових мов програмування, фреймворків та інструментів.</li>
                 <li><strong>Стресостійкість</strong> — здатність зберігати концентрацію та ефективно працювати в умовах високого навантаження.</li>
@@ -135,7 +127,6 @@
 
         <section id="languages">
             <h2>Languages</h2>
-
             <ul>
                 <li>Українська — рідна</li>
                 <li>Англійська — B1+</li>
@@ -143,13 +134,47 @@
             </ul>
         </section>
 
+        <section id="reviews-section">
+            <h2>Коментарі попередніх роботодавців</h2>
+            <div id="employer-comments"></div>
+        </section>
     </main>
 
     <footer>
         <p>
-            &copy; 2026 Ривак Дарина Орестівна. Резюме створено в рамках лабораторної роботи №2.
+            &copy; 2026 Ривак Дарина Орестівна. Резюме створено в рамках лабораторної роботи №4.
         </p>
+        <div id="localstorage-info" class="localstorage-info"></div>
     </footer>
 
+    <!-- Модальне вікно з формою зворотного зв'язку -->
+    <div id="feedback-modal" class="modal-backdrop modal-hidden">
+        <div class="modal-window">
+            <button id="close-modal-btn" class="close-modal-btn" type="button" aria-label="Закрити">&times;</button>
+            <h2>Зворотний зв'язок</h2>
+            <p>Заповніть форму, щоб надіслати повідомлення.</p>
+            <form action="https://formspree.io/f/xnpdgapj" method="POST" class="feedback-form">
+                <label>
+                    Ім'я:
+                    <input type="text" name="name" required placeholder="Введіть ваше ім'я">
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" required placeholder="example@mail.com">
+                </label>
+                <label>
+                    Номер телефону:
+                    <input type="tel" name="phone" required placeholder="+380...">
+                </label>
+                <label>
+                    Повідомлення:
+                    <textarea name="message" rows="4" required placeholder="Введіть текст у довільній формі..."></textarea>
+                </label>
+                <button type="submit" class="submit-btn">Надіслати</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
