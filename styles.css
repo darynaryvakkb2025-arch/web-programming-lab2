@@ -196,3 +196,9 @@ body.dark-theme .feedback-form textarea {
     color: #f8fafc;
     border-color: #475569;
 }
+
+header {
+  background-color: #2f6f4f;
+  color: #ffffff;
+  padding: 1.5rem;
+}

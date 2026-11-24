@@ -1,6 +1,6 @@
 function Header({ name, age, contacts, isDark, onToggleTheme }) {
   return (
-    <header className="bg-slate-700 px-6 py-10 text-white shadow-md dark:bg-slate-950">
+    <header className="bg-emerald-700 px-6 py-10 text-white shadow-md dark:bg-emerald-950">
       <div className="mx-auto max-w-4xl">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
